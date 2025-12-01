@@ -59,46 +59,7 @@ python scripts/evaluate.py --base_dir ./checkpoints/deep --dataset deep
 └── requirements.txt             # Gerekli paketler
 ```
 
-## 📚 Dokümantasyon
 
-- **[USAGE_GUIDE.md](USAGE_GUIDE.md)**: Detaylı kullanım kılavuzu ve örnekler
-- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)**: Sık karşılaşılan sorunlar ve çözümleri
-- **[CHECKLIST.md](CHECKLIST.md)**: Proje teslim kontrol listesi
-- **[MODEL_CARD_TEMPLATE.md](MODEL_CARD_TEMPLATE.md)**: HuggingFace model card şablonu
-
-## 🎯 Proje Görevleri
-
-### ✅ Görev 1: Model Kurulumu & İlk İnceleme
-```bash
-python scripts/inference_test.py
-```
-
-### ✅ Görev 2: Dataset Analizi
-```bash
-python scripts/dataset_analysis.py
-```
-
-### ✅ Görev 3: Training
-```bash
-# DEEP dataset
-python scripts/train_deep.py
-
-# DIVERSE dataset
-python scripts/train_diverse.py
-```
-
-### ✅ Görev 4: Checkpoint Seçimi
-```bash
-# Tüm checkpoint'leri değerlendir
-python scripts/evaluate.py --base_dir ./checkpoints/deep --dataset deep
-python scripts/evaluate.py --base_dir ./checkpoints/diverse --dataset diverse
-```
-
-### ✅ Görev 5: Final Değerlendirme & Sunum
-- GitHub repository hazırla
-- Model'leri HuggingFace'e yükle
-- Benchmark değerlendirmesi yap
-- 1-2 sayfalık sunum hazırla
 
 ## ⚙️ Konfigürasyon
 
@@ -116,15 +77,8 @@ python scripts/evaluate.py --base_dir ./checkpoints/diverse --dataset diverse
 - Dropout: `0.1`
 - Target modules: Attention + MLP layers
 
-## 🔧 OOM (Out of Memory) Çözümleri
 
-Sırayla deneyin:
-1. ✅ Flash Attention 2 (zaten aktif)
-2. ✅ Gradient Checkpointing (zaten aktif)
-3. Context length'i düşür: `800` veya `512`
-4. 8-bit training (son çare - kaliteyi düşürür)
 
-Detaylar için: [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 
 ## 📊 Training Logları
 
@@ -140,16 +94,7 @@ Loglar otomatik kaydedilir:
 - **DIVERSE Dataset**: [CodeGen-Diverse-5K](https://huggingface.co/datasets/Naholav/CodeGenDiverse-5K)
 - **LoRA Dokümantasyonu**: [HuggingFace LoRA Guide](https://huggingface.co/docs/diffusers/training/lora)
 
-## ⚠️ Önemli Notlar
 
-1. **Yanlış çözümleri FİLTRELEMEYİN**: Model robustness için gerekli
-2. **Her iki training de base model'den başlar**: DEEP ve DIVERSE birbirinden bağımsız
-3. **Test data'yı training'de kullanmayın**: Sadece değerlendirme için
-4. **Log'ları mutlaka kaydedin**: Terminal çıktıları dosyaya yazılıyor
-
-## 💬 İletişim
-
-Sorular için: arda.mulayim@outlook.com
 
 ## 📝 Lisans
 
