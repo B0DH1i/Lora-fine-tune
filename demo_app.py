@@ -28,13 +28,13 @@ def load_models():
     print("Loading DEEP model...")
     models["DEEP"] = PeftModel.from_pretrained(
         base_model,
-        "B0DH1i/qwen-coder-lora-deep"  # Model yüklendikten sonra güncelle
+        "bodhai/qwen-coder-lora-deep"
     )
     
     print("Loading DIVERSE model...")
     models["DIVERSE"] = PeftModel.from_pretrained(
         base_model,
-        "B0DH1i/qwen-coder-lora-diverse"  # Model yüklendikten sonra güncelle
+        "bodhai/qwen-coder-lora-diverse"
     )
     
     print("✓ All models loaded!")
@@ -296,8 +296,8 @@ with gr.Blocks(css=custom_css, title="LoRA Code Generator") as demo:
             
             ### Links
             - 🔗 [GitHub Repository](https://github.com/B0DH1i/Lora-fine-tune)
-            - 🤗 [DEEP Model on HuggingFace](#)
-            - 🤗 [DIVERSE Model on HuggingFace](#)
+            - 🤗 [DEEP Model on HuggingFace](https://huggingface.co/bodhai/qwen-coder-lora-deep)
+            - 🤗 [DIVERSE Model on HuggingFace](https://huggingface.co/bodhai/qwen-coder-lora-diverse)
             
             ---
             
