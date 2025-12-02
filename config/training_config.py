@@ -1,7 +1,5 @@
-"""Training Hyperparameters Configuration"""
 
 class TrainingConfig:
-    """Önerilen hyperparameter'lar - ihtiyaca göre ayarlanabilir"""
     
     # Learning Rate
     learning_rate = 2e-4  # Muhafazakar başlangıç
