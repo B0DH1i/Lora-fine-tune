@@ -14,20 +14,7 @@ def setup_trainer(
     output_dir,
     run_name
 ):
-    """
-    Trainer'ı yapılandır
-    
-    Args:
-        model: LoRA ile yapılandırılmış model
-        tokenizer: Tokenizer
-        train_dataset: Training dataset
-        eval_dataset: Evaluation dataset
-        output_dir: Checkpoint kayıt dizini
-        run_name: Deneme adı (logging için)
-    
-    Returns:
-        Configured Trainer
-    """
+  
     config = TrainingConfig()
     
     # Training arguments
